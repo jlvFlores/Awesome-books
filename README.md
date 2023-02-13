@@ -35,6 +35,10 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
+- HTML
+- JAVASCRIPT
+- LINTERS
+- VS Code
 ### Tech Stack <a name="tech-stack"></a>
 
 > Here is a list of the tech used in this project.
@@ -108,12 +112,19 @@ You can deploy this project using:  Using [GitHub pages](https://jlvflores.githu
 
 > Here is a mention to this projects collaborators.
 
+👤  **Jose Luis**
+
 - GitHub: [jlvFlores](https://github.com/jlvFlores)
 - Twitter: [@JoseVaz44312762](https://twitter.com/JoseVaz44312762)
 - LinkedIn: [Jose Vazquez](https://www.linkedin.com/in/jose-vazquez-178a8225a/)
 
 
-- GitHub: [Malcom-Charlie](https://github.com/Malcom-Charlie)
+-👤  **Malcom Charles**
+
+- GitHub: [Malcom Charles](https://github.com/Malcom-Charlie)
+- Twitter: [Simple Malcom](https://twitter.com/simple_malcom)
+- LinkedIn: [Malcom Charles](https://www.linkedin.com/in/malcom-charles-49411017a/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
