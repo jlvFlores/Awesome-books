@@ -20,7 +20,7 @@ const displayBooks = () => {
         <button class="remove-btn" data-id="${book.Number}">Remove</button>
       </div>
     `);
-    count += count;
+    count = count + 1;
   });
 
   const removeBook = (id) => {
