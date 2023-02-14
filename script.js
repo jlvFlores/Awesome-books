@@ -8,7 +8,7 @@ const updateLocalStorage = () => localStorage.setItem('books', JSON.stringify(bo
 
 const reloadPage = () => document.location.reload(true);
 
-const displayBooks= () => {
+const displayBooks = () => {
   const library = document.getElementById('library');
   let count = 0;
   books.forEach((book) => {
@@ -27,19 +27,19 @@ const displayBooks= () => {
     books = books.filter((book) => book.Number !== id);
     updateLocalStorage();
     reloadPage();
-  }
+  };
 
   const removeButtons = document.querySelectorAll('.remove-btn');
   removeButtons.forEach((button) => button.addEventListener('click', (e) => {
     removeBook(e.target.dataset.id);
   }));
-}
+};
 
 const addBook = (title, author) => {
   books.push({ Title: title, Author: author });
   updateLocalStorage();
   reloadPage();
-}
+};
 
 const addButton = document.getElementById('add-btn');
 addButton.addEventListener('click', () => {
