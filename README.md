@@ -36,17 +36,26 @@
 ## 🛠 Built With <a name="built-with"></a>
 
 - HTML
+- CSS
 - JAVASCRIPT
 - LINTERS
 - VS Code
+
 ### Tech Stack <a name="tech-stack"></a>
 
 > Here is a list of the tech used in this project.
+
+- HTML
+- CSS
+- JAVASCRIPT
+- LINTERS
+- VS Code
 
 <details>
   <summary>Client</summary>
   <ul>
     <li><p>HTML5</p></li>
+    <li><p>CSS3</p></li>
     <li><p>JavaScript</p></li>
   </ul>
 </details>
@@ -57,7 +66,7 @@
 
 > Description of some of the project's key features.
 
-- JS functions that creates html elements based on an array.
+- JS functions that creates html elements based on classes.
 - Has working linters to encourage clean code.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
