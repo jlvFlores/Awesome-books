@@ -1,49 +1,51 @@
-/* eslint-disable no-unused-vars */
-const addButton = document.getElementById('add-btn');
-const library = document.getElementById('library');
+// An array to keep the books in the collection
+let books = [];
 
-let books = JSON.parse(localStorage.getItem('books'));
+// Load the books from local storage if they exist
+if (localStorage.getItem('books')) {
+  books = JSON.parse(localStorage.getItem('books'));
+}
 
+// Function to add a new book to the collection
+function addBook(title, author) {
+  books.push({ title, author });
+  updateLocalStorage();
+  displayBooks();
+}
+
+// Function to remove a book from the collection
+function removeBook(title) {
+  books = books.filter(book => book.title !== title);
+  updateLocalStorage();
+  displayBooks();
+}
+
+// Function to display all books in the collection
 function displayBooks() {
-  books.forEach((book) => {
-    library.insertAdjacentHTML('beforeend', `
-      <div>
-        <p>${book.Title}</p>
-        <p>${book.Author}</p>
-        <button onclick="removeBook('${book.Title}')">Remove</button>
-      </div>
-    `);
+  const booksList = document.getElementById('books-list');
+  booksList.innerHTML = '';
+  books.forEach(book => {
+    const bookElement = document.createElement('div');
+    bookElement.innerHTML = `<p>${book.title}</p> <br> <p>${book.author}</p> <br>
+                             <button onclick="removeBook('${book.title}')">Remove</button>`;
+    booksList.appendChild(bookElement);
   });
 }
 
+// Function to update the books in local storage
 function updateLocalStorage() {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-function reloadPage() {
-  document.location.reload(true);
-}
+// Add event listener to the "Add" button
+const addButton = document.getElementById('add-button');
+addButton.addEventListener('click', function() {
+  const titleInput = document.getElementById('title-input');
+  const authorInput = document.getElementById('author-input');
+  addBook(titleInput.value, authorInput.value);
+  titleInput.value = '';
+  authorInput.value = '';
+});
 
-function addBook(title, author) {
-  books.push({ Title: title, Author: author });
-  updateLocalStorage();
-  reloadPage();
-}
-
-function removeBook(title) {
-  books = books.filter((book) => book.Title !== title);
-  updateLocalStorage();
-  reloadPage();
-}
-
-function validateForm() {
-  const inputTitle = document.getElementById('input-title').value;
-  const inputAuthor = document.getElementById('input-author').value;
-  if (inputTitle && inputAuthor) {
-    addBook(inputTitle, inputAuthor);
-  }
-}
-
+// Display the books when the page loads
 displayBooks();
-
-addButton.addEventListener('click', validateForm);
