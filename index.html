@@ -8,19 +8,45 @@
   <title>Awesome Books</title>
 </head>
 <body>
-  <h1>Awesome Books</h1>
-
-  <section id="library">
+  <header>
+    <span>Awesome Books</span>
+    <ul>
+      <li>List</li>
+      <li>Add new</li>
+      <li>Contact</li>
+    </ul>
+  </header>
+  
+  <section id="library-section">
+    <h1>Awesome Books</h1>
+    <div id="library"></div>
   </section>
-  
-  <div class="separator"></div>
-  
-  <h2>Add a Book</h2>
-  <form action="">
-    <input type="text" id="input-title" placeholder="Title" required>
-    <input type="text" id="input-author" placeholder="Author" required>
-    <button id="add-btn" type="submit">Add</button>
-  </form>
+
+  <section id="add-section">
+    <h2>Add a Book</h2>
+    <form action="">
+      <input type="text" id="input-title" placeholder="Title" required>
+      <input type="text" id="input-author" placeholder="Author" required>
+      <button id="add-btn" type="submit">Add</button>
+    </form>
+  </section>
+
+  <section id="contact-section">
+    <h2>Contact information</h2>
+    <div>
+      <p>Do you have any questions or you just want to say "Hello"? <br>You can reach out to us!</p>
+      <ul>
+        <li>Our email: <a href="#">mail.mail.com</a></li>
+        <li>Our phone number: 1234567890</li>
+        <li>Our address: Streetname 15 90909 City, Country</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>Copyright</span>
+    <span>...</span>
+  </footer>
   <script src="./script.js"></script>
 </body>
 </html>
