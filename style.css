@@ -2,14 +2,54 @@
   font-weight: 600;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+}
+
+header > * {
+  margin: 0.5rem;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  padding: 0;
+}
+
+header li.active a {
+  color: lightblue;
+}
+
 h1,
 h2 {
   display: flex;
   justify-content: center;
 }
 
+h1 {
+  margin-top: 3rem;
+}
+
+h2 {
+  margin: 5rem;
+}
+
 #library {
   border: 3px solid black;
+  position: fixed;
+  height: 60vh;
+  width: 96.75%;
+  margin: 0 auto;
+  overflow: scroll;
 }
 
 .book {
@@ -22,24 +62,23 @@ h2 {
   background-color: lightgray;
 }
 
-.separator {
-  margin: 1rem auto;
-  background-color: black;
-  width: 20%;
-  height: 5px;
+.add-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   width: 50%;
   gap: 0.5rem;
   align-items: end;
 }
 
-#add-btn {
-  width: 20%;
+input {
+  display: flex;
+  width: 100%;
 }
 
 input,
@@ -49,4 +88,35 @@ button {
 
 button {
   box-shadow: 3px 3px black;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.blue {
+  color: blue;
+}
+
+footer {
+  margin-top: 10vh;
+  padding: 0.5rem;
+  border: 2px solid black;
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  form {
+    gap: 1rem;
+  }
 }
