@@ -72,13 +72,13 @@ const menuAddOption = document.getElementById('menu-add');
 const menuContactOption = document.getElementById('menu-contact');
 
 const librarySection = document.querySelector('.library-section');
-const addSection = document.querySelector('.add-section');
+const addaBook = document.querySelector('.add-section');
 const contactSection = document.querySelector('.contact-section');
 
 window.onload = () => {
   menuListOption.classList.add('blue');
 
-  addSection.classList.add('hide');
+  addaBook.classList.add('hide');
   contactSection.classList.add('hide');
 };
 
@@ -88,7 +88,7 @@ menuListOption.addEventListener('click', () => {
   menuContactOption.classList.remove('blue');
 
   librarySection.classList.remove('hide');
-  addSection.classList.add('hide');
+  addaBook.classList.add('hide');
   contactSection.classList.add('hide');
 });
 
@@ -98,7 +98,7 @@ menuAddOption.addEventListener('click', () => {
   menuContactOption.classList.remove('blue');
 
   librarySection.classList.add('hide');
-  addSection.classList.remove('hide');
+  addaBook.classList.remove('hide');
   contactSection.classList.add('hide');
 });
 
@@ -108,6 +108,6 @@ menuContactOption.addEventListener('click', () => {
   menuContactOption.classList.add('blue');
 
   librarySection.classList.add('hide');
-  addSection.classList.add('hide');
+  addaBook.classList.add('hide');
   contactSection.classList.remove('hide');
 });
